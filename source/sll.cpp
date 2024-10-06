@@ -138,3 +138,24 @@ void Show(List L)
         }
     }
 }
+
+adr SearchBy(List L, int target)
+{
+    adr q;
+    int count = 1;
+
+    q = L.first;
+    if (q == NULL)
+    {
+        return q;
+    }
+    else
+    {
+        while (q != NULL && count != target)
+        {
+            q = q->next;
+            count++;
+        }
+        return q;
+    }
+}

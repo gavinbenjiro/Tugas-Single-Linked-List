@@ -28,5 +28,6 @@ adr Delete_First(List &L, adr p);
 adr Delete_Last(List &L, adr p);
 adr Delete_After(List &L, adr prev, adr p);
 void Show(List L);
+adr SearchBy(List L, int data);
 
 #endif // SLL_H_INCLUDED
