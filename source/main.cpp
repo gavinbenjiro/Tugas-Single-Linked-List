@@ -78,12 +78,30 @@ int main()
     input.kode = "WIN";
     input.maskapai = "Wings Air";
     input.harga = 395000;
-    // Membuat / create elemen list ke-5
+    // Membuat / create elemen list ke-6
     pInput = New_Elemen(input);
     // Memanggil insert (Inser After)
     prev = SearchBy(list, dataKe = 4);
     Insert_After(list, prev, pInput);
 
     // Menampilkan list
+    Show(list);
+
+    // Mencari data ke-2
+    prev = SearchBy(list, dataKe = 2);
+    // Menghapus data ke-2
+    pDelete = Delete_After(list, prev);
+    delete pDelete;
+
+    cout << "-------------------------------------" << endl;
+    Show(list);
+
+    // Mencari data ke-6
+    prev = SearchBy(list, dataKe = 6);
+    // Menghapus data ke-6
+    pDelete = Delete_After(list, prev);
+    delete pDelete;
+
+    cout << "-------------------------------------" << endl;
     Show(list);
 }

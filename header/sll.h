@@ -24,9 +24,9 @@ adr New_Elemen(infotype data);
 void Insert_First(List &L, adr p);
 void Insert_Last(List &L, adr p);
 void Insert_After(List &L, adr prev, adr p);
-adr Delete_First(List &L, adr p);
-adr Delete_Last(List &L, adr p);
-adr Delete_After(List &L, adr prev, adr p);
+adr Delete_First(List &L);
+adr Delete_Last(List &L);
+adr Delete_After(List &L, adr prev);
 void Show(List L);
 adr SearchBy(List L, int data);
 

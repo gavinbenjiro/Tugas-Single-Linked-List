@@ -62,6 +62,7 @@ void Insert_After(List &L, adr prev, adr p)
     else if (prev->next == NULL)
     {
         prev->next = p;
+        p->next = NULL;
     }
     else
     {
@@ -70,8 +71,10 @@ void Insert_After(List &L, adr prev, adr p)
     }
 }
 
-adr Delete_First(List &L, adr p)
+adr Delete_First(List &L)
 {
+    adr p;
+
     if (L.first == NULL)
     {
         p = NULL;
@@ -85,10 +88,10 @@ adr Delete_First(List &L, adr p)
     return p;
 }
 
-adr Delete_Last(List &L, adr p)
+adr Delete_Last(List &L)
 {
 
-    adr q;
+    adr q, p;
 
     if (L.first == NULL)
     {
@@ -107,8 +110,10 @@ adr Delete_Last(List &L, adr p)
     return p;
 }
 
-adr Delete_After(List &L, adr prev, adr p)
+adr Delete_After(List &L, adr prev)
 {
+    adr p;
+
     if (L.first == NULL || prev->next == NULL)
     {
         p = NULL;
@@ -150,16 +155,16 @@ void Show(List L)
 adr SearchBy(List L, int target)
 {
     adr q;
-    int count = 1;
 
     q = L.first;
-    if (q == NULL)
+    if (q->next == NULL)
     {
         return q;
     }
     else
     {
-        while (q != NULL && count != target)
+        int count = 1;
+        while (q->next != NULL && count < target - 1)
         {
             q = q->next;
             count++;
