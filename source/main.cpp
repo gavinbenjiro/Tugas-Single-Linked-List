@@ -17,7 +17,7 @@ int main()
     List list;
     infotype input;
     adr prev, pInput, pDelete;
-    int data;
+    int dataKe;
 
     // Membuat / meng-create list
     Create_List(list);
@@ -86,15 +86,8 @@ int main()
     // Membuat / create elemen list ke-5
     pInput = New_Elemen(input);
     // Memanggil insert (Inser After)
-    if (list.first != NULL)
-    {
-        prev = SearchBy(list, data = 2);
-        Insert_After(list, prev, pInput);
-    }
-    else
-    {
-        Insert_First(list, pInput);
-    }
+    prev = SearchBy(list, dataKe = 4);
+    Insert_After(list, prev, pInput);
 
     cout << endl;
     Show(list);

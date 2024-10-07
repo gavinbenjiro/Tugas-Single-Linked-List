@@ -55,7 +55,11 @@ void Insert_Last(List &L, adr p)
 
 void Insert_After(List &L, adr prev, adr p)
 {
-    if (prev->next == NULL)
+    if (L.first == NULL)
+    {
+        L.first = p;
+    }
+    else if (prev->next == NULL)
     {
         prev->next = p;
     }
