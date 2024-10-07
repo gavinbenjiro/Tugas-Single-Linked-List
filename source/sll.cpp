@@ -125,6 +125,7 @@ adr Delete_After(List &L, adr prev, adr p)
 void Show(List L)
 {
     adr q;
+    int i = 1;
     q = L.first;
     if (q == NULL)
     {
@@ -134,11 +135,14 @@ void Show(List L)
     {
         while (q != NULL)
         {
+            cout << "Data ke-" << i << endl;
             cout << "Jam keberangkatan    : " << q->info.jam << endl;
             cout << "Kode booking         : " << q->info.kode << endl;
             cout << "Maskapai penerbangan : " << q->info.maskapai << endl;
-            cout << "Harga tiket          : " << q->info.harga << endl;
+            cout << "Harga tiket          : " << q->info.harga << endl
+                 << endl;
             q = q->next;
+            i++;
         }
     }
 }

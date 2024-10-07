@@ -32,10 +32,6 @@ int main()
     // Memanggil insert (Insert First)
     Insert_First(list, pInput);
 
-    cout << endl;
-    Show(list);
-    cout << endl;
-
     // Input data ke-2 dari user
     input.jam = "2";
     input.kode = "BAT";
@@ -45,10 +41,6 @@ int main()
     pInput = New_Elemen(input);
     // Memanggil insert (Insert Last)
     Insert_Last(list, pInput);
-
-    cout << endl;
-    Show(list);
-    cout << endl;
 
     // Input data ke-3 dari user
     input.jam = "3";
@@ -60,10 +52,6 @@ int main()
     // Memanggil insert (Insert First)
     Insert_First(list, pInput);
 
-    cout << endl;
-    Show(list);
-    cout << endl;
-
     // Input data ke-4 dari user
     input.jam = "4";
     input.kode = "QAT";
@@ -73,10 +61,6 @@ int main()
     pInput = New_Elemen(input);
     // Memanggil insert (Insert Last)
     Insert_Last(list, pInput);
-
-    cout << endl;
-    Show(list);
-    cout << endl;
 
     // Input data ke-5 dari user
     input.jam = "5";
@@ -89,7 +73,17 @@ int main()
     prev = SearchBy(list, dataKe = 4);
     Insert_After(list, prev, pInput);
 
-    cout << endl;
+    // Input data ke-6 dari user
+    input.jam = "6";
+    input.kode = "WIN";
+    input.maskapai = "Wings Air";
+    input.harga = 395000;
+    // Membuat / create elemen list ke-5
+    pInput = New_Elemen(input);
+    // Memanggil insert (Inser After)
+    prev = SearchBy(list, dataKe = 4);
+    Insert_After(list, prev, pInput);
+
+    // Menampilkan list
     Show(list);
-    cout << endl;
 }
