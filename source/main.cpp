@@ -99,4 +99,6 @@ int main()
     cout << "DAN MENGHAPUS DATA URUTAN KE-2" << endl;
     Show(list);
     cout << "-----------------------------------" << endl;
+
+    return 0;
 }
