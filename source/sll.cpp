@@ -172,3 +172,40 @@ adr SearchBy(List L, int target)
         return q;
     }
 }
+
+void SortBy(List &L)
+{
+    // Selection Sort
+    adr iterasi, current, elemenMin;
+    infotype temp;
+    int min;
+
+    // iterasi berfungsi untuk perulangan pertama hingga elemen terakhir
+    // current berfungsi untuk mencari nilai minimum disetiap elemen setiap kali perulangan
+    // elemenMin berfungsi untuk menunjuk elemen yg memiliki nilai terkecil
+    // temp berfungsi untuk menampung info / nilai dari elemen untuk pertukaran
+    // min berfungsi untuk menampung nilai minimun
+    if (L.first != NULL && L.first->next != NULL)
+    {
+        iterasi = L.first;
+        while (iterasi->next != NULL)
+        {
+            current = iterasi;
+            min = current->info.harga;
+            elemenMin = current;
+            while (current->next != NULL)
+            {
+                current = current->next;
+                if (min > current->info.harga)
+                {
+                    min = current->info.harga;
+                    elemenMin = current;
+                }
+            }
+            temp = iterasi->info;
+            iterasi->info = elemenMin->info;
+            elemenMin->info = temp;
+            iterasi = iterasi->next;
+        }
+    }
+}

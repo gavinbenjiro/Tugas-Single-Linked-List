@@ -4,15 +4,6 @@ using namespace std;
 
 int main()
 {
-    // cout << "Masukkan jam penerbangan : ";
-    // cin >> input.jam;
-    // cout << "Masukkan kode booking : ";
-    // cin >> input.kode;
-    // cout << "Masukkan maskapai penerbangan : ";
-    // cin >> input.maskapai;
-    // cout << "Masukkan harga tiket : ";
-    // cin >> input.harga;
-
     // Deklarasi variabel
     List list;
     infotype input;
@@ -23,7 +14,7 @@ int main()
     Create_List(list);
 
     // Input data ke-1 dari user
-    input.jam = "1";
+    input.jam = "01.00";
     input.kode = "GAR";
     input.maskapai = "Garuda Indonesia";
     input.harga = 750000;
@@ -33,7 +24,7 @@ int main()
     Insert_First(list, pInput);
 
     // Input data ke-2 dari user
-    input.jam = "2";
+    input.jam = "02.00";
     input.kode = "BAT";
     input.maskapai = "Batik Air";
     input.harga = 500000;
@@ -43,7 +34,7 @@ int main()
     Insert_Last(list, pInput);
 
     // Input data ke-3 dari user
-    input.jam = "3";
+    input.jam = "03.00";
     input.kode = "CIT";
     input.maskapai = "Citilink";
     input.harga = 655000;
@@ -53,7 +44,7 @@ int main()
     Insert_First(list, pInput);
 
     // Input data ke-4 dari user
-    input.jam = "4";
+    input.jam = "04.00";
     input.kode = "QAT";
     input.maskapai = "Qatar Airways";
     input.harga = 1500000;
@@ -63,7 +54,7 @@ int main()
     Insert_Last(list, pInput);
 
     // Input data ke-5 dari user
-    input.jam = "5";
+    input.jam = "05.00";
     input.kode = "SAJ";
     input.maskapai = "Super Air Jet";
     input.harga = 1500000;
@@ -74,7 +65,7 @@ int main()
     Insert_After(list, prev, pInput);
 
     // Input data ke-6 dari user
-    input.jam = "6";
+    input.jam = "06.00";
     input.kode = "WIN";
     input.maskapai = "Wings Air";
     input.harga = 395000;
@@ -84,8 +75,10 @@ int main()
     prev = SearchBy(list, dataKe = 4);
     Insert_After(list, prev, pInput);
 
-    // Menampilkan list
+    // Menampilkan list (show 1)
+    cout << "MENAMPILKAN LIST YANG BELUM TERURUT" << endl;
     Show(list);
+    cout << "-----------------------------------" << endl;
 
     // Mencari data ke-2
     prev = SearchBy(list, dataKe = 2);
@@ -93,15 +86,17 @@ int main()
     pDelete = Delete_After(list, prev);
     delete pDelete;
 
-    cout << "-------------------------------------" << endl;
-    Show(list);
-
     // Mencari data ke-6
     prev = SearchBy(list, dataKe = 6);
     // Menghapus data ke-6
     pDelete = Delete_After(list, prev);
     delete pDelete;
 
-    cout << "-------------------------------------" << endl;
+    // Melakukan sorting data (Selection Sort)
+    SortBy(list);
+    // Menampilkan list setelah di sorting (show 2)
+    cout << "MENAMPILKAN LIST YANG SUDAH TERURUT MEMBESAR ";
+    cout << "DAN MENGHAPUS GARUDA INDONESIA" << endl;
     Show(list);
+    cout << "-----------------------------------" << endl;
 }
