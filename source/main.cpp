@@ -96,7 +96,7 @@ int main()
     SortBy(list);
     // Menampilkan list setelah di sorting (show 2)
     cout << "MENAMPILKAN LIST YANG SUDAH TERURUT MEMBESAR ";
-    cout << "DAN MENGHAPUS GARUDA INDONESIA" << endl;
+    cout << "DAN MENGHAPUS DATA URUTAN KE-2" << endl;
     Show(list);
     cout << "-----------------------------------" << endl;
 }
